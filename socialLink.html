@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Kisan Rai</title>
 
-    <!-- Bootstrap CSS for responsive and modern layout -->
+    <!-- Bootstrap CSS for responsive layout -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ1Q2Xz2Ck4jQawseygkcXwdoUs3ZQQ4u3PZ9g2Q4F2a2jbOp5wksv6lgpD2" crossorigin="anonymous">
 
     <!-- Bootstrap Icons for social media icons -->
@@ -13,70 +13,77 @@
 
     <style>
         body {
-            background-color: #f0f0f5;  /* Light background */
-            font-family: 'Roboto', sans-serif;
-            color: #444;
+            background-color: #f9f9f9; /* Light background */
+            font-family: 'Arial', sans-serif;
+            color: #333;
             margin: 0;
             padding: 0;
         }
+
         .container {
             max-width: 600px;
             margin: 0 auto;
             text-align: center;
-            padding: 40px;
+            padding: 30px;
             background-color: #fff;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
+            border-radius: 20px;
             margin-top: 10%;
         }
+
         h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #333;
+            color: black; /* Blue Color */
             font-weight: 600;
-            letter-spacing: 1px;
         }
+
         p {
-            font-size: 1.2rem;
-            color: #555;
-            margin-bottom: 40px;
-        }
+    font-size: 1.2rem; /* Slightly larger font size for better readability */
+    color: black; /* White text color */
+    margin-bottom: 40px;
+    font-family: 'Roboto Slab', serif; /* Cinematic font */
+   
+    letter-spacing: 1px; /* Slight letter-spacing for a cinematic feel */
+    line-height: 1.5; /* Increase line height for better readability */
+}
+
+
         .profile-pic {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
-            border: 5px solid #bfc9ca ; /* Gray border */
+            border: 4px solid#5d6d7e; /* Blue border */
         }
+
         .social-links {
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            position: relative;
+            justify-content: space-evenly;
+            gap: 20px;
+            padding-top: 20px;
         }
+
         .social-links a {
             text-decoration: none;
-            font-size: 2.5rem;
-            color: #333;
+            font-size: 2rem;
+            color: #fff;
+            background-color: #1e3a8a; /* Blue Color */
             padding: 20px;
             border-radius: 50%;
-            background-color: #f8f9fa;
-            transition: transform 0.3s, color 0.3s, background-color 0.3s, box-shadow 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
         }
+
         .social-links a:hover {
-            color: white;
-            background-color: #007bff;
-            transform: scale(1.15);  /* Zoom effect */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
-        .social-links a:focus {
-            outline: none;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.6); /* Focus effect */
-        }
+
         .social-links a .icon-name {
             position: absolute;
             bottom: -30px;
@@ -91,39 +98,52 @@
             padding: 5px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
         .social-links a:hover .icon-name {
-            opacity: 1;  /* Show name on hover */
+            opacity: 1;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            p {
-                font-size: 1rem;
-            }
+        /* Mobile Specific Design (Icons in linear shape) */
+        @media (max-width: 576px) {
             .container {
                 padding: 20px;
-                margin-top: 5%;
-            }
-            .social-links {
-                gap: 20px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .profile-pic {
-                width: 120px;
-                height: 120px;
+                margin-top: 30%;
             }
             h1 {
                 font-size: 2rem;
             }
             p {
-                font-size: 0.9rem;
+                font-size: 1rem;
+            }
+            .profile-pic {
+                width: 100px;
+                height: 100px;
+            }
+            .social-links {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .social-links a {
+                font-size: 2.5rem;
+                padding: 15px;
+                border-radius: 10px;
+                background-color: #1e3a8a;
+            }
+            .social-links a:hover {
+                transform: scale(1.15);
+            }
+            .social-links a .icon-name {
+                bottom: -40px;
+                font-size: 1rem;
+                color: #333;
+                opacity: 0;
+            }
+            .social-links a:hover .icon-name {
+                opacity: 1;
             }
         }
+
     </style>
 </head>
 <body>
@@ -158,7 +178,7 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS for responsive elements and interactive effects -->
+    <!-- Bootstrap JS for interactive elements -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybPT4XNWqvQqP1uu6pX9E1mgB0yyBb6jwAB5K9Q0LD8g5f9F3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0p9bqpxp9ATKLYbHxlxvThJf6Ifzd5eB5Y2cpJ9B5fQkvHvn" crossorigin="anonymous"></script>
 
